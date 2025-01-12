@@ -1,0 +1,49 @@
+To calculate adjusted p-values using the formula adj p-value = p-value * m / i:
+
+1. Determine the total number of hypotheses tested (m).
+   - Count the total number of p-values in the dataset.
+
+2. Sort the p-values in ascending order.
+   - Assign ranks to each p-value based on this sorted order (i = rank).
+
+3. Calculate the adjusted p-values.
+   - For each p-value, compute the adjusted p-value using the formula:
+     adj p-value = p-value * m / i
+   - Replace i with the rank of the respective p-value.
+
+
+
+
+
+To calculate log₂FC (log fold change):
+
+1. Obtain FPKM values for two conditions.
+   - Identify the FPKM (Fragments Per Kilobase Million) values for Condition 1 and Condition 
+
+2. Compute the logarithms of FPKM values.
+   - Calculate log₂(FPKMCondition 2) and log₂(FPKMCondition 1).
+
+3. Subtract the logarithms.
+   - Use the formula:
+     log₂FC = log₂(FPKMCondition 2) − log₂(FPKMCondition 1)
+
+
+To analyze protein-protein interaction (PPI) networks:
+1. Extract differentially expressed genes (DEGs).
+   - Use predefined criteria such as fold change and statistical significance.
+
+2. Upload the protein list to STRING database.
+   - Go to https://string-db.org/ and select the 'Multiple Proteins' tab.
+   - Paste the protein list into the input box and select the specific organism.
+   - Apply a confidence score threshold of >0.775.
+   - Construct and visualize the PPI network based on these parameters.
+
+3. Export and import networks to Cytoscape.
+   - Export networks from STRING and import them into Cytoscape for further analysis.
+
+4. Merge networks in Cytoscape.
+   - Steps to merge:
+     1. Go to File > Import > Network > File and import the individual networks you want to merge.
+     2. Repeat this step for each network. The networks will appear as separate entries in the Network Panel.
+     3. Navigate to Tools > Merge > Networks to open the Network Merge dialog box.
+     4. Select the networks you want to merge from the list of imported networks.
